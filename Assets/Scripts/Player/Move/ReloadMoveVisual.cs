@@ -5,23 +5,13 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ReloadMoveVisual : MonoBehaviour
+public class ReloadMoveVisual : MonoBehaviour, IObserver
 {
     [SerializeField] private PlayerMove _playerMove;
 
     [SerializeField] private Image _reloadBar;
 
     private CancellationTokenSource cts;
-
-    private void OnEnable()
-    {
-        _playerMove.OnMove += Reload;
-    }
-
-    private void OnDisable()
-    {
-        _playerMove.OnMove -= Reload;
-    }
 
     private void Reload()
     {
@@ -40,5 +30,10 @@ public class ReloadMoveVisual : MonoBehaviour
         _reloadBar.DOFillAmount(0f, _playerMove.TimeMoving).SetEase(Ease.Linear);
 
         await UniTask.Delay(TimeSpan.FromSeconds(_playerMove.TimeMoving), cancellationToken: token);
+    }
+
+    public void UpdateObserver()
+    {
+        Reload();
     }
 }

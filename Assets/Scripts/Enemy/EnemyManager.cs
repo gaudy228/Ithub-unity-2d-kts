@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : MonoBehaviour, IObserver
 {
     [SerializeField] private PlayerMove _playerMove;
 
@@ -11,13 +11,11 @@ public class EnemyManager : MonoBehaviour
 
     private void OnEnable()
     {
-        _playerMove.OnMove += EnemiesMove;
         _playerSpecialAttack.OnSpecialAttack += UndoEnemy;
     }
 
     private void OnDisable()
     {
-        _playerMove.OnMove -= EnemiesMove;
         _playerSpecialAttack.OnSpecialAttack -= UndoEnemy;
     }
 
@@ -35,5 +33,10 @@ public class EnemyManager : MonoBehaviour
         {
             enemy.UndoLastCommand();
         }
+    }
+
+    public void UpdateObserver()
+    {
+        EnemiesMove();
     }
 }

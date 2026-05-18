@@ -1,9 +1,11 @@
 using Cysharp.Threading.Tasks;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove : MonoBehaviour, ISubject
 {
     [SerializeField] private float _speed;
 
@@ -11,7 +13,8 @@ public class PlayerMove : MonoBehaviour
 
     private CancellationTokenSource cts;
 
-    public event Action OnMove;
+    private List<IObserver> observers = new List<IObserver>();
+
     [field: SerializeField] public float TimeMoving {  get; private set; }
 
     public void Move(Vector2 direction)
@@ -24,7 +27,7 @@ public class PlayerMove : MonoBehaviour
                 transform.position += move;
                 cts = new CancellationTokenSource();
                 TimeForMoving(cts.Token).Forget();
-                OnMove?.Invoke();
+                Notify();
             }
         }
     }
@@ -45,5 +48,26 @@ public class PlayerMove : MonoBehaviour
     {
         cts?.Cancel();
         cts?.Dispose();
+    }
+
+    public void Attach(IObserver observer)
+    {
+        if (!observers.Contains(observer))
+        {
+            observers.Add(observer);
+        }
+    }
+
+    public void Detached(IObserver observer)
+    {
+        observers.Remove(observer);
+    }
+
+    public void Notify()
+    {
+        foreach (var observer in observers)
+        {
+            observer.UpdateObserver();
+        }
     }
 }
