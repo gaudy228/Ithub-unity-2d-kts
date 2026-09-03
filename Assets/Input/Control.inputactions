@@ -1,14 +1,14 @@
 {
-    "name": "Main",
+    "name": "Control",
     "maps": [
         {
-            "name": "Game",
-            "id": "f0347a48-b61e-463e-8908-573d0f467189",
+            "name": "Main",
+            "id": "2fe84f00-d634-402e-bc9f-5c2e74935183",
             "actions": [
                 {
-                    "name": "Up",
+                    "name": "Jump",
                     "type": "Button",
-                    "id": "f0f80e71-4737-44c2-8f4a-6da3056773d6",
+                    "id": "29103c76-2eab-4f11-b4fa-78d6b751c5b0",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -18,23 +18,23 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "1ff9feca-6dc0-47ff-9c56-32919d6b60b8",
+                    "id": "9bcdda21-5c62-459b-9a8c-5efc4532f992",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Up",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "d85a21a3-a842-4206-86b0-6e1821a9adf3",
+                    "id": "9593b878-be57-46ac-b902-b86784126c6b",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Up",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
