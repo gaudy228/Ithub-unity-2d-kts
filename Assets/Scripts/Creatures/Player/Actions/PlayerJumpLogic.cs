@@ -13,7 +13,7 @@ public class PlayerJumpLogic
 
     public void Jump()
     {
-        _rb.velocity = Vector3.zero;
+        _rb.linearVelocity = Vector3.zero;
         _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
     }
 }

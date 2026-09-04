@@ -2,7 +2,7 @@ using System;
 
 public class PlayerInput
 {
-    public Action OnUpPressed;
+    public Action OnJumpPressed;
 
     private Control _control;
 
@@ -10,7 +10,7 @@ public class PlayerInput
     {
         _control = new Control();
         _control.Main.Enable();
-        _control.Main.Jump.performed += ctx => OnUpPressed?.Invoke();
+        _control.Main.Jump.performed += ctx => OnJumpPressed?.Invoke();
     }
 
     public void OnDisable()

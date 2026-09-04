@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="CounterRoot" data-source="project://database/Assets/SO/Data/PlayerData.asset?fileID=11400000&amp;guid=cd4de12122dbd1d4b8ae7b00136dda96&amp;type=2#PlayerData" style="flex-grow: 1; align-items: center;">
+        <ui:VisualElement name="CounterBg" style="width: 200px; height: 50px; background-color: rgb(99, 99, 99); top: 30px;">
+            <ui:Label name="CounterValue" text="0" style="flex-grow: 1; -unity-text-align: middle-center; font-size: 48px;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
