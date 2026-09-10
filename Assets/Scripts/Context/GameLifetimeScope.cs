@@ -18,5 +18,15 @@ public class GameLifetimeScope : LifetimeScope
         builder.Register<PlayerData>(Lifetime.Singleton);
 
         builder.Register<GameObjectFactory>(Lifetime.Singleton);
+
+        builder.RegisterFactory<GameObject, GameObject>(
+            container => container.Resolve<GameObjectFactory>().Create,
+            Lifetime.Singleton
+        );
+
+        builder.RegisterFactory<GameObject, Vector3, Quaternion, GameObject>(
+            container => container.Resolve<GameObjectFactory>().Create,
+            Lifetime.Singleton
+        );
     }
 }

@@ -1,11 +1,10 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using VContainer;
 
 public class Spawner : MonoBehaviour
 {
-    [Inject] private GameObjectFactory _factory;
-
     [SerializeField] private GameObject _prefab;
     [SerializeField] private Transform _spawnPoint;
 
@@ -17,6 +16,14 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _minSpawnTime;
     [SerializeField] private float _maxSpawnTime;
 
+    private Func<GameObject, Vector3, Quaternion, GameObject> _create;
+
+    [Inject]
+    public void Construct(Func<GameObject, Vector3, Quaternion, GameObject> create)
+    {
+        _create = create;
+    }
+
     private void Start()
     {
         StartCoroutine(SpawnRoutine());
@@ -26,15 +33,15 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            float delay = Random.Range(_minSpawnTime, _maxSpawnTime);
+            float delay = UnityEngine.Random.Range(_minSpawnTime, _maxSpawnTime);
             yield return new WaitForSeconds(delay);
 
-            float randomY = Random.Range(_minHeight, _maxHeight);
+            float randomY = UnityEngine.Random.Range(_minHeight, _maxHeight);
 
             Vector3 position = _spawnPoint.position;
             position.y = randomY;
 
-           _factory.Create(_prefab, position, _spawnPoint.rotation);
+           _create(_prefab, position, _spawnPoint.rotation);
         }
     }
 }
