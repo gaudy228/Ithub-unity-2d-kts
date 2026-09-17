@@ -5,22 +5,25 @@ using VContainer;
 
 public class CounterUI : MonoBehaviour
 {
-    [SerializeField] private PanelRenderer panelRenderer;
+    [SerializeField] private UIDocument uiDocument;
     [Inject] private PlayerData playerData;
 
     private Label scoreLabel;
 
     private void OnEnable()
     {
-        panelRenderer.RegisterUIReloadCallback(OnUIReload);
+        var root = uiDocument.rootVisualElement;
+
+        BindUI(root);
     }
 
     private void OnDisable()
     {
-        panelRenderer.UnregisterUIReloadCallback(OnUIReload);
+        scoreLabel?.ClearBinding("text");
+        scoreLabel = null;
     }
 
-    private void OnUIReload(PanelRenderer renderer, VisualElement root)
+    private void BindUI(VisualElement root)
     {
         scoreLabel = root.Q<Label>("CounterValue");
 
@@ -30,6 +33,7 @@ public class CounterUI : MonoBehaviour
             dataSourcePath = new PropertyPath(nameof(PlayerData.Score)),
             bindingMode = BindingMode.ToTarget
         };
+
         scoreLabel.SetBinding("text", binding);
     }
 }
