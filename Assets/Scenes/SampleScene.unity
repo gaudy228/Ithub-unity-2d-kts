@@ -570,6 +570,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2035336873718982078, guid: c5652b93d51c75f42ad9f26fa9ddce73, type: 3}
   m_PrefabInstance: {fileID: 1222996053}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1455161759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1455161761}
+  - component: {fileID: 1455161760}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1455161760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455161759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3f39ff54549eb4c81ee542d4cb1689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdTeste
+--- !u!4 &1455161761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455161759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542645106
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +884,162 @@ MonoBehaviour:
   - {fileID: 2049605865}
   _rbPlayer: {fileID: 1686387397}
   _jumpForce: 5
+--- !u!1 &1851625881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1851625883}
+  - component: {fileID: 1851625882}
+  m_Layer: 0
+  m_Name: Banner Ad (LevelPlay)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1851625882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851625881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ab5e4e9273cb048a5aef28708f3aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.LevelPlay::Unity.Services.LevelPlay.LevelPlayBannerAdBehaviour
+  m_AndroidAdUnitId: n2f8ropxn3csgurs
+  m_IOSAdUnitId: 
+  m_LoadOnStart: 1
+  m_DisplayOnLoad: 1
+  m_Size: 2
+  m_AdaptiveWidth: -1
+  m_CustomWidth: 320
+  m_CustomHeight: 50
+  m_Position: 7
+  m_CustomPosition: {x: 0, y: 0}
+  m_PlacementName: 
+  m_RespectSafeArea: 0
+  m_BidFloor: 0
+  m_OnAdLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdLoadFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdDisplayed:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdDisplayFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdClicked:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdExpanded:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdCollapsed:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdLeftApplication:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdImpressionDataReady:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1851625883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851625881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1947674176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1947674178}
+  - component: {fileID: 1947674177}
+  - component: {fileID: 1947674179}
+  m_Layer: 0
+  m_Name: LevelPlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1947674177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947674176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daeafd1f254d7bb488b55c09b6a5ac5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.LevelPlay::Unity.Services.LevelPlay.LevelPlaySdkBehaviour
+  m_AndroidAppKey: 2924fe8a5
+  m_IOSAppKey: 
+  m_UserId: 
+  m_InitializeOnStart: 1
+  m_PersistAcrossScenes: 1
+  m_PauseGameDuringAd: 0
+  m_OnInitSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInitFailed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1947674178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947674176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1947674179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947674176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1230d94314330949bb37c49b3928878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdService
+  androidAppKey: 2924fe8a5
+  androidBannerId: n2f8ropxn3csgurs
+  androidRewardedId: kg2i958onlok8csh
 --- !u!1 &2049605865
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +1110,83 @@ MonoBehaviour:
   _maxHeight: 2.5
   _minSpawnTime: 5
   _maxSpawnTime: 10
+--- !u!1 &2059346985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2059346987}
+  - component: {fileID: 2059346986}
+  m_Layer: 0
+  m_Name: Rewarded Ad (LevelPlay)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2059346986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059346985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98caa55d14262d640aeaebae85ed794d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.LevelPlay::Unity.Services.LevelPlay.LevelPlayRewardedAdBehaviour
+  m_AndroidAdUnitId: kg2i958onlok8csh
+  m_IOSAdUnitId: 
+  m_LoadOnStart: 1
+  m_AutoReload: 1
+  m_PlacementName: 
+  m_BidFloor: 0
+  m_OnAdLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdLoadFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdDisplayed:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdDisplayFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdRewarded:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdClicked:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdClosed:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdInfoChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnAdImpressionDataReady:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &2059346987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059346985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2101992418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,3 +1366,7 @@ SceneRoots:
   - {fileID: 664130244}
   - {fileID: 1713507097}
   - {fileID: 2101992420}
+  - {fileID: 1947674178}
+  - {fileID: 1851625883}
+  - {fileID: 2059346987}
+  - {fileID: 1455161761}
